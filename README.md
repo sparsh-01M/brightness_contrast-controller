@@ -2,9 +2,9 @@
 This program allows users to interactively adjust the brightness and contrast of an image using OpenCV. The program creates a window with trackbars to control brightness and contrast and displays the adjusted image in real-time.
 
 # How to Use
-1- Place an image file named test.jpg in the specified directory.
-2- Run the script.
-3- Use the trackbars to adjust the brightness and contrast of the image.
+- Place an image file named test.jpg in the specified directory.
+- Run the script.
+- Use the trackbars to adjust the brightness and contrast of the image.
 
 # Code Overview
  # 1- BrightnessContrast Function
