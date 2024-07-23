@@ -22,7 +22,7 @@ This program allows users to interactively adjust the brightness and contrast of
 - Loads the image from the specified path.
 - Checks if the image is loaded correctly.
 - Creates a copy of the image for processing.
-- Creates a window named 'GEEK' for displaying the image and trackbars.
+- Creates a window named 'controlWindow' for displaying the image and trackbars.
 - Creates trackbars for brightness and contrast adjustment.
 - Displays the original image in the window.
 - Initializes the BrightnessContrast function.
