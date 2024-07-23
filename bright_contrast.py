@@ -2,8 +2,8 @@ import cv2
 
 def BrightnessContrast(*args): 
     # Get the current positions of the trackbars
-    brightness = cv2.getTrackbarPos('Brightness', 'GEEK') 
-    contrast = cv2.getTrackbarPos('Contrast', 'GEEK') 
+    brightness = cv2.getTrackbarPos('Brightness', 'controlWindow') 
+    contrast = cv2.getTrackbarPos('Contrast', 'controlWindow') 
 
     # Apply the brightness and contrast adjustments
     effect = controller(img, brightness, contrast) 
@@ -45,7 +45,7 @@ def controller(img, brightness=255, contrast=127):
 
 if __name__ == '__main__': 
     # Load the image
-    original = cv2.imread("/Users/sparshsinghal/Desktop/sorting visualizer/image_processing/test.jpg") 
+    original = cv2.imread("/Users/sparshsinghal/Desktop/sorting visualizer/image_processing/images/test.jpg") 
 
     if original is None:
         raise FileNotFoundError("The image file 'test.jpeg' could not be read. Please check the file path and ensure the file exists.")
@@ -54,14 +54,14 @@ if __name__ == '__main__':
     img = original.copy() 
 
     # Create a window for the trackbars
-    cv2.namedWindow('GEEK') 
+    cv2.namedWindow('controlWindow') 
 
     # Create trackbars for brightness and contrast
-    cv2.createTrackbar('Brightness', 'GEEK', 255, 2 * 255, BrightnessContrast)
-    cv2.createTrackbar('Contrast', 'GEEK', 127, 2 * 127, BrightnessContrast)
+    cv2.createTrackbar('Brightness', 'controlWindow', 255, 2 * 255, BrightnessContrast)
+    cv2.createTrackbar('Contrast', 'controlWindow', 127, 2 * 127, BrightnessContrast)
 
     # Display the original image
-    cv2.imshow('GEEK', original) 
+    cv2.imshow('controlWindow', original) 
 
     # Call the function once to initialize
     BrightnessContrast() 
